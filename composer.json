@@ -1,0 +1,46 @@
+{
+    "name": "lazycaptcha/laravel",
+    "description": "Laravel integration for LazyCaptcha — drop-in CAPTCHA protection for forms, with validation rule, middleware, Blade component, and facade.",
+    "keywords": ["laravel", "captcha", "lazycaptcha", "bot-protection", "form-validation"],
+    "homepage": "https://github.com/yourusername/lazycaptcha-laravel",
+    "license": "MIT",
+    "type": "library",
+    "require": {
+        "php": "^8.2",
+        "illuminate/contracts": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/http": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/support": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/validation": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/view": "^10.0|^11.0|^12.0|^13.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0|^9.0|^10.0",
+        "phpunit/phpunit": "^10.0|^11.0|^12.0",
+        "mockery/mockery": "^1.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "LazyCaptcha\\Laravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LazyCaptcha\\Laravel\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LazyCaptcha\\Laravel\\LazyCaptchaServiceProvider"
+            ],
+            "aliases": {
+                "LazyCaptcha": "LazyCaptcha\\Laravel\\Facades\\LazyCaptcha"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    }
+}
