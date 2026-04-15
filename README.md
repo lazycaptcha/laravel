@@ -1,6 +1,6 @@
 # LazyCaptcha for Laravel
 
-Drop-in [LazyCaptcha](https://github.com/yourusername/lazycaptcha) integration for Laravel apps. Adds a Blade component, validation rule, middleware, and facade — so protecting a form is one line of HTML and one line of validation.
+Drop-in [LazyCaptcha](https://github.com/lazycaptcha/lazycaptcha) integration for Laravel apps. Adds a Blade component, validation rule, middleware, and facade — so protecting a form is one line of HTML and one line of validation.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Latest Stable Version](https://img.shields.io/packagist/v/lazycaptcha/laravel.svg)](https://packagist.org/packages/lazycaptcha/laravel)
@@ -24,7 +24,7 @@ Add your keys to `.env`:
 ```ini
 LAZYCAPTCHA_SITE_KEY=your-site-key-uuid
 LAZYCAPTCHA_SECRET_KEY=your-secret-hex
-LAZYCAPTCHA_URL=https://your-lazycaptcha-instance.com    # optional, defaults to https://lazycaptcha.com
+LAZYCAPTCHA_URL=https://yoursite.com    # optional, defaults to https://lazycaptcha.com
 ```
 
 ## Usage
