@@ -50,7 +50,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | The challenge type rendered by default. One of:
-    | 'auto', 'image_puzzle', 'pow', 'behavioral', 'text_math'.
+    | 'auto', 'image_puzzle', 'pow', 'behavioral', 'text_math', 'press_hold', 'rotate_align'.
     |
     */
     'type' => env('LAZYCAPTCHA_TYPE', 'auto'),
