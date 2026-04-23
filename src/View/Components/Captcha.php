@@ -23,7 +23,7 @@ class Captcha extends Component
 
         $this->sitekey = $sitekey ?: ($captcha->siteKey() ?? '');
         $this->type = $type ?: ($config['type'] ?? 'auto');
-        $this->theme = $theme ?: ($config['theme'] ?? 'light');
+        $this->theme = $theme ?: ($config['theme'] ?? 'auto');
         $this->scriptUrl = $captcha->widgetScriptUrl();
     }
 

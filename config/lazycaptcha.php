@@ -63,7 +63,7 @@ return [
     | Default widget theme. 'light' or 'dark'.
     |
     */
-    'theme' => env('LAZYCAPTCHA_THEME', 'light'),
+    'theme' => env('LAZYCAPTCHA_THEME', 'auto'),
 
     /*
     |--------------------------------------------------------------------------
