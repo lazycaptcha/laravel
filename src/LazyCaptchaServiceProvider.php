@@ -40,8 +40,9 @@ class LazyCaptchaServiceProvider extends ServiceProvider
         // Load views (for the bundled Blade component)
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'lazycaptcha');
 
-        // Register Blade component: <x-lazycaptcha />
-        Blade::component('lazycaptcha::components.captcha', 'lazycaptcha');
+        // Register Blade component: <x-lazycaptcha /> (class-based so constructor
+        // populates $sitekey, $type, $theme, $scriptUrl on the view).
+        Blade::component(Captcha::class, 'lazycaptcha');
 
         // Register validation rule: 'captcha_token' => 'required|lazycaptcha'
         Validator::extend('lazycaptcha', function ($attribute, $value, $parameters, $validator) {
@@ -58,7 +59,7 @@ class LazyCaptchaServiceProvider extends ServiceProvider
             if ($expression === '') {
                 $expression = 'null';
             }
-            return "<?php echo view('lazycaptcha::components.captcha', ['sitekey' => {$expression}])->render(); ?>";
+            return "<?php \$__lc = new \\LazyCaptcha\\Laravel\\View\\Components\\Captcha({$expression}); echo view('lazycaptcha::components.captcha', ['sitekey' => \$__lc->sitekey, 'type' => \$__lc->type, 'theme' => \$__lc->theme, 'scriptUrl' => \$__lc->scriptUrl, 'attributes' => new \\Illuminate\\View\\ComponentAttributeBag([])])->render(); ?>";
         });
     }
 }
