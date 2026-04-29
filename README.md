@@ -24,7 +24,7 @@ Add your keys to `.env`:
 ```ini
 LAZYCAPTCHA_SITE_KEY=your-site-key-uuid
 LAZYCAPTCHA_SECRET_KEY=your-secret-hex
-LAZYCAPTCHA_URL=https://https://lazycaptcha.com
+LAZYCAPTCHA_URL=https://lazycaptcha.com
 ```
 
 ## Usage
