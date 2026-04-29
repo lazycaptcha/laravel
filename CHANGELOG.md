@@ -2,6 +2,12 @@
 
 All notable changes to this package will be documented here.
 
+## [2.0.0] - 2026-04-28
+
+### Changed
+- Release-aligned package versioning for the LazyCaptcha 2.0 launch
+- Documentation now reflects six challenge types and multi-step challenge flows
+
 ## [0.1.0] - 2026-04-15
 
 ### Added

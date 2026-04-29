@@ -52,6 +52,13 @@ The component reads the site key from your config. You can override per-form:
 <x-lazycaptcha sitekey="ANOTHER_SITE_KEY" type="image_puzzle" theme="dark" />
 ```
 
+Widget preset and width overrides are supported too:
+
+```blade
+<x-lazycaptcha widget="newsletter" />
+<x-lazycaptcha widget="standard" width="420px" />
+```
+
 There's also a Blade directive if you prefer:
 
 ```blade
@@ -140,7 +147,9 @@ Full config reference (`config/lazycaptcha.php`):
 | `base_url` | `LAZYCAPTCHA_URL` | `https://lazycaptcha.com` | Your LazyCaptcha instance URL. |
 | `timeout` | `LAZYCAPTCHA_TIMEOUT` | `5` | HTTP timeout in seconds. |
 | `type` | `LAZYCAPTCHA_TYPE` | `auto` | Default challenge type. |
-| `theme` | `LAZYCAPTCHA_THEME` | `light` | Widget theme. |
+| `theme` | `LAZYCAPTCHA_THEME` | `auto` | Widget theme. |
+| `widget` | `LAZYCAPTCHA_WIDGET` | `standard` | Widget preset. `newsletter` stays intentionally skinny. |
+| `width` | `LAZYCAPTCHA_WIDTH` | â€” | Optional width override. The hosted widget caps widths at `500px`. |
 | `token_field` | — | `lazycaptcha-token` | Form field name (don't change unless you know why). |
 | `send_remote_ip` | — | `true` | Forward client IP to verification API. |
 

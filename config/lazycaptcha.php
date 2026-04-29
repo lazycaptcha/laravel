@@ -67,6 +67,28 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Widget Preset
+    |--------------------------------------------------------------------------
+    |
+    | Default widget preset. One of: 'standard', 'compact', 'newsletter',
+    | or 'login'. Newsletter stays intentionally skinny.
+    |
+    */
+    'widget' => env('LAZYCAPTCHA_WIDGET', 'standard'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Width Override
+    |--------------------------------------------------------------------------
+    |
+    | Optional widget width override. The hosted widget caps widths at 500px.
+    | Leave null to use the preset's natural width.
+    |
+    */
+    'width' => env('LAZYCAPTCHA_WIDTH'),
+
+    /*
+    |--------------------------------------------------------------------------
     | Token Field Name
     |--------------------------------------------------------------------------
     |
