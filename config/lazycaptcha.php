@@ -82,10 +82,46 @@ return [
     |--------------------------------------------------------------------------
     |
     | Optional widget width override. The hosted widget caps widths at 500px.
-    | Leave null to use the preset's natural width.
+    | Leave null to use the preset's natural width (which is now compact by
+    | default — 280px standard, 240px compact, 260px login, 220px newsletter).
     |
     */
     'width' => env('LAZYCAPTCHA_WIDTH'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Color Scheme
+    |--------------------------------------------------------------------------
+    |
+    | Default color scheme for the widget accent. One of:
+    | 'default' (purple), 'ocean', 'forest', 'sunset', 'graphite'.
+    | Leave null/unset to use the widget's default scheme.
+    |
+    */
+    'color_scheme' => env('LAZYCAPTCHA_COLOR_SCHEME'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Watermark Position
+    |--------------------------------------------------------------------------
+    |
+    | Where the LazyCaptcha branding appears. One of:
+    | 'footer-right' (default), 'footer-left', 'top-right', 'top-left'.
+    | Newsletter widgets always render the watermark in the top-right.
+    |
+    */
+    'watermark_position' => env('LAZYCAPTCHA_WATERMARK_POSITION'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Watermark Display
+    |--------------------------------------------------------------------------
+    |
+    | How prominent the watermark is. One of: 'full', 'badge', 'icon'.
+    | Available on paid plans — free plans always render 'full'.
+    |
+    */
+    'watermark_display' => env('LAZYCAPTCHA_WATERMARK_DISPLAY'),
 
     /*
     |--------------------------------------------------------------------------

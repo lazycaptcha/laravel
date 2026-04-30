@@ -59,6 +59,31 @@ Widget preset and width overrides are supported too:
 <x-lazycaptcha widget="standard" width="420px" />
 ```
 
+Color scheme and watermark placement are configurable per-component:
+
+```blade
+<x-lazycaptcha
+    widget="compact"
+    color-scheme="ocean"
+    watermark-position="top-right"
+    watermark-display="icon"
+/>
+```
+
+Available `color-scheme` values: `default`, `ocean`, `forest`, `sunset`, `graphite`.
+Available `watermark-position` values: `footer-right`, `footer-left`, `top-right`, `top-left`.
+Available `watermark-display` values: `full`, `badge`, `icon` (paid plans only — free always renders `full`).
+
+Set defaults globally via `.env`:
+
+```ini
+LAZYCAPTCHA_COLOR_SCHEME=ocean
+LAZYCAPTCHA_WATERMARK_POSITION=footer-right
+LAZYCAPTCHA_WATERMARK_DISPLAY=icon
+```
+
+> **Newsletter widgets** are intentionally minimal: regardless of any `type` you pass, they always serve a `press_hold` challenge and render in the most compact box. This is enforced both server-side (`ChallengeManager`) and client-side (widget JS).
+
 There's also a Blade directive if you prefer:
 
 ```blade
