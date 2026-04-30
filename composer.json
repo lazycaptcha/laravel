@@ -2,7 +2,7 @@
     "name": "lazycaptcha/laravel",
     "description": "Laravel integration for LazyCaptcha — drop-in CAPTCHA protection for forms, with validation rule, middleware, Blade component, and facade.",
     "keywords": ["laravel", "captcha", "lazycaptcha", "bot-protection", "form-validation"],
-    "homepage": "https://github.com/yourusername/lazycaptcha-laravel",
+    "homepage": "https://github.com/lazycaptcha/laravel",
     "license": "MIT",
     "type": "library",
     "require": {
